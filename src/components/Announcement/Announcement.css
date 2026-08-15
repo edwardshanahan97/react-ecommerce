@@ -1,0 +1,11 @@
+.announcement {
+  background-color: var(--color-text-dark);
+  color: var(--color-text-light);
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}

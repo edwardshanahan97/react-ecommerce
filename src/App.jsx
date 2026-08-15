@@ -1,5 +1,11 @@
+import Announcement from "./components/Announcement/Announcement";
+
 const App = () => {
-  return <h1>THE COLLECTION</h1>;
+  return (
+    <div className="app">
+      <Announcement />
+    </div>
+  );
 };
 
 export default App;
