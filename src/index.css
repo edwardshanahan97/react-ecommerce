@@ -1,0 +1,47 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap");
+
+/* Variables */
+
+:root {
+  --color-background: #faf9f6;
+  --color-text: #171717;
+  --color-surface: #f0eee9;
+  --color-border: #e8e8e5;
+  --color-muted: #717171;
+
+  --font-headings: "DM Serif Display", serif;
+  --font-main: "Manrope", sans-serif;
+
+  --border: 1px solid var(--color-border);
+}
+
+/* Global */
+
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-headings);
+  font-weight: 400;
+}
