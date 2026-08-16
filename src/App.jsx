@@ -1,5 +1,6 @@
 import Announcement from "./components/Announcement/Announcement";
 import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
 
 const App = () => {
   return (
@@ -7,6 +8,8 @@ const App = () => {
       <Announcement />
 
       <Navbar />
+
+      <Home />
     </div>
   );
 };

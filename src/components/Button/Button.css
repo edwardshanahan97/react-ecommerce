@@ -1,0 +1,29 @@
+.button {
+  background: transparent;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 1px solid var(--color-text-dark);
+  padding: 1.6rem 0;
+  height: auto;
+  border: none;
+  cursor: pointer;
+}
+
+.button--full {
+  color: var(--color-text-light);
+  background-color: var(--color-text-dark);
+  border: 1px solid var(--color-text-dark);
+}
+
+.button--full:hover {
+  opacity: 0.8;
+}
+
+.button--outline {
+  border: 1px solid var(--color-text-dark);
+}
+
+.button--outline:hover {
+  color: var(--color-text-light);
+  background-color: var(--color-text-dark);
+}
