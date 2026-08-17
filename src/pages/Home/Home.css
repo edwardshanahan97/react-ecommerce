@@ -1,0 +1,11 @@
+.home__col {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .home__col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,40 @@
+.newsletter {
+  background-color: var(--color-surface);
+  height: 32rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.newsletter p {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.newsletter input {
+  color: var(--color-text-dark);
+  font-family: inherit;
+  background: transparent;
+  font-family: inherit;
+  border: 1px solid var(--color-text-dark);
+  width: 100%;
+  margin-bottom: 1.6rem;
+  padding: 0.8rem;
+}
+
+.newsletter .button {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .newsletter input {
+    display: block;
+    width: 50%;
+  }
+
+  .newsletter .button {
+    width: 50%;
+  }
+}

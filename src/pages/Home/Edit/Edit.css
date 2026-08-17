@@ -1,0 +1,21 @@
+.edit {
+  color: var(--color-text-light);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://images.pexels.com/photos/5119195/pexels-photo-5119195.jpeg")
+      no-repeat center/cover;
+  height: 32rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.edit p {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.edit .button {
+  width: 18rem;
+}
