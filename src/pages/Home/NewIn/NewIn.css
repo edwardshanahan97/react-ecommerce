@@ -1,0 +1,30 @@
+.new-in {
+}
+
+.new-in__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.new-in h2 {
+  margin-bottom: 0.8rem;
+}
+
+.new-in p {
+  font-size: 1.6rem;
+}
+
+.new-in__products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+@media (min-width: 1040px) {
+  .new-in__products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

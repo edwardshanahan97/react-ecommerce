@@ -51,7 +51,23 @@ h4 {
   font-weight: 400;
 }
 
+h2 {
+  font-size: 3.2rem;
+}
+
 a {
   color: var(--color-text-dark);
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 3.6rem;
+  }
+}
+
+@media (min-width: 1040px) {
+  h2 {
+    font-size: 4.4rem;
+  }
 }
