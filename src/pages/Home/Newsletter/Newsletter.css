@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+.newsletter h2 {
+  font-size: 3.2rem;
+}
+
 .newsletter p {
   font-size: 1.6rem;
   margin-bottom: 1.6rem;
@@ -28,13 +32,17 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .newsletter input {
+@media (min-width: 1040px) {
+  .newsletter {
+    height: 40rem;
+  }
+
+  /* .newsletter input {
     display: block;
-    width: 50%;
+    width: 100%;
   }
 
   .newsletter .button {
-    width: 50%;
-  }
+    width: 100%;
+  } */
 }

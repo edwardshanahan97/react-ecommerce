@@ -19,3 +19,9 @@
 .edit .button {
   width: 18rem;
 }
+
+@media (min-width: 1040px) {
+  .edit {
+    height: 40rem;
+  }
+}

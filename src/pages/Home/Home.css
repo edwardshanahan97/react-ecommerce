@@ -9,3 +9,10 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (min-width: 1040px) {
+  .home__col {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+}

@@ -1,21 +1,12 @@
 import Container from "../../../components/Container/Container";
 import Button from "../../../components/Button/Button";
 import ProductCard from "../../../components/ProductCard/ProductCard";
-import { fetchData } from "../../../services/fetchData";
+import { products } from "../../../data/products";
 import "./NewIn.css";
 import { useEffect, useState } from "react";
 
 const NewIn = () => {
-  const [products, setProducts] = useState([]);
   const [error, setError] = useState("");
-
-  useEffect(() => {
-    fetchData("products/category/mens-shirts?limit=4")
-      .then((res) => setProducts(res.products))
-      .catch((err) => setError(err));
-  }, []);
-
-  console.log(products);
 
   return (
     <section className="new-in">
@@ -34,7 +25,7 @@ const NewIn = () => {
           {products.map((product) => (
             <ProductCard
               key={product.id}
-              thumbnail={product.thumbnail}
+              image={product.image}
               title={product.title}
               price={product.price}
             />
