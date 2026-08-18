@@ -1,4 +1,5 @@
 import Announcement from "./components/Announcement/Announcement";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 
@@ -10,6 +11,8 @@ const App = () => {
       <Navbar />
 
       <Home />
+
+      <Footer />
     </div>
   );
 };
