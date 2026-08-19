@@ -1,79 +1,111 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import Container from "../Container/Container";
 import "./Navbar.css";
 import { Heart, Search, ShoppingBag, User } from "lucide-react";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 150) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
+  useEffect(() => {
+    if (isActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isActive]);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isSticky ? "scroll" : " "}`}>
       <Container>
-        <a className="navbar__logo" href="#">
+        <NavLink to="/" className="navbar__logo" href="#">
           AN FHÍS
-        </a>
+        </NavLink>
 
         <ul className={`navbar__list ${isActive ? "active" : ""}`}>
           <li className="navbar__item">
-            <a href="#" className="navbar__link">
+            <NavLink to="/women" className="navbar__link">
               Women
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a href="#" className="navbar__link">
+            <NavLink to="/men" href="#" className="navbar__link">
               Men
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a href="#" className="navbar__link">
+            <NavLink to="/beauty" href="#" className="navbar__link">
               Beauty
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a href="#acc" className="navbar__link">
+            <NavLink to="/accessories" className="navbar__link">
               Accessories
-            </a>
+            </NavLink>
           </li>
         </ul>
 
         <div className="navbar__icons-desktop">
-          <a href="#" className="navbar__icon" aria-label="Search">
-            <Search color="#171717" size={20} strokeWidth={1.5} />
-          </a>
+          <Search color="#171717" size={20} strokeWidth={1.5} />
 
-          <a href="#" className="navbar__icon" aria-label="Profile">
+          <NavLink to="/profile" className="navbar__icon" aria-label="Profile">
             <User color="#171717" size={20} strokeWidth={1.5} />
-          </a>
+          </NavLink>
 
-          <a href="#" className="navbar__icon" aria-label="Wishlist">
+          <NavLink
+            to="/wishlist"
+            className="navbar__icon"
+            aria-label="Wishlist"
+          >
             <Heart color="#171717" size={20} strokeWidth={1.5} />
-          </a>
+          </NavLink>
 
-          <a href="#" className="navbar__icon" aria-label="Cart">
+          <NavLink to="/cart" className="navbar__icon" aria-label="Cart">
             <ShoppingBag color="#171717" size={20} strokeWidth={1.5} />
-          </a>
+          </NavLink>
         </div>
 
         <div className="navbar__icons-mobile">
-          <a href="#" className="navbar__icon" aria-label="Search">
-            <Search color="#171717" size={20} strokeWidth={1.5} />
-          </a>
+          <Search color="#171717" size={20} strokeWidth={1.5} />
 
-          <a href="#" className="navbar__icon" aria-label="Cart">
+          <NavLink to="cart" className="navbar__icon" aria-label="Cart">
             <ShoppingBag color="#171717" size={20} strokeWidth={1.5} />
-
-            {/* <span>2</span> */}
-          </a>
+          </NavLink>
         </div>
 
         <div className={`navbar__icons-menu ${isActive ? "active" : ""}`}>
-          <a href="#" className="navbar__icon" aria-label="Profile">
+          <NavLink to="/profile" className="navbar__icon" aria-label="Profile">
             <User color="#faf9f6" size={20} strokeWidth={1.5} />
-          </a>
+          </NavLink>
 
-          <a href="#" className="navbar__icon" aria-label="Wishlist">
+          <NavLink
+            to="/whishlist"
+            className="navbar__icon"
+            aria-label="Wishlist"
+          >
             <Heart color="#faf9f6" size={20} strokeWidth={1.5} />
-          </a>
+          </NavLink>
         </div>
 
         <button
