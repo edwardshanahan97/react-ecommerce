@@ -60,6 +60,19 @@ a {
   text-decoration: none;
 }
 
+.scroll {
+  background-color: var(--color-text-light);
+  box-shadow: 0 1px 8px rgb(0 0 0 / 0.1);
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  z-index: 3;
+
+  animation: stickyNav 0.4s ease-out;
+}
+
 @media (min-width: 768px) {
   h2 {
     font-size: 3.6rem;

@@ -6,23 +6,6 @@ import { Heart, Search, ShoppingBag, User } from "lucide-react";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
-
-  const handleScroll = () => {
-    if (window.pageYOffset > 150) {
-      setIsSticky(true);
-    } else {
-      setIsSticky(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
 
   useEffect(() => {
     if (isActive) {
@@ -37,7 +20,7 @@ const Navbar = () => {
   }, [isActive]);
 
   return (
-    <nav className={`navbar ${isSticky ? "scroll" : " "}`}>
+    <nav className={`navbar`}>
       <Container>
         <NavLink to="/" className="navbar__logo" href="#">
           AN FHÍS

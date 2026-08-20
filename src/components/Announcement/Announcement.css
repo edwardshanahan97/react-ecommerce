@@ -9,3 +9,11 @@
   justify-content: center;
   gap: 1rem;
 }
+
+.duck {
+  position: fixed;
+  /* top: 0; */
+  width: 100%;
+  z-index: 3;
+  animation: stickyNav 0.4s ease-out;
+}
