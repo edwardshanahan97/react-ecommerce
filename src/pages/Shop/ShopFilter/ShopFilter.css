@@ -1,0 +1,46 @@
+.shop-filters {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  width: 90%;
+  margin: 3.2rem 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.shop-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.shop-filters button {
+  color: var(--color-text-dark);
+  background: transparent;
+  font-family: var(--font-main);
+  font-size: 1.4rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.shop-filters button:hover {
+  border-color: var(--color-text-dark);
+}
+
+.shop-filters button.active {
+  background-color: var(--color-text-dark);
+  color: var(--color-text-light);
+  border-color: var(--color-text-dark);
+}
+
+@media (min-width: 768px) {
+  .shop-filters {
+    gap: 1.6rem;
+  }
+}

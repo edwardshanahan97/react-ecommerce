@@ -7,8 +7,6 @@ const ShopHero = ({ category }) => {
 
   const { title, text, image } = headerData;
 
-  console.log(image);
-
   return (
     <section
       style={{

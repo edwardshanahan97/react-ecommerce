@@ -54,4 +54,32 @@ export const products = [
     rating: 4.5,
     reviews: 19,
   },
+
+  {
+    id: 5,
+    title: "Merino Knit Polo",
+    price: 89,
+    image: "../public/assets/images/merino-knit-polo.webp",
+    category: "men",
+    type: "tops",
+    description:
+      "A fine merino knit polo with a relaxed fit, open collar and soft lightweight finish.",
+    sizes: ["S", "M", "L", "XL"],
+    rating: 4.8,
+    reviews: 24,
+  },
+
+  {
+    id: 6,
+    title: "Leather Court Trainers",
+    price: 139,
+    image: "../public/assets/images/leather-court-trainers.webp",
+    category: "men",
+    type: "shoes",
+    description:
+      "Minimal leather trainers with a clean low-profile silhouette and contrasting rubber sole.",
+    sizes: ["40", "41", "42", "43", "44"],
+    rating: 4.7,
+    reviews: 36,
+  },
 ];

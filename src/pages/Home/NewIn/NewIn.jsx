@@ -8,6 +8,15 @@ import { useEffect, useState } from "react";
 const NewIn = () => {
   const [error, setError] = useState("");
 
+  const filterProducts = products
+    .map((product) => product)
+    .reverse()
+    .slice(0, 4);
+
+  console.log(filterProducts);
+
+  console.log(products);
+
   return (
     <section className="new-in">
       <Container>
@@ -22,7 +31,7 @@ const NewIn = () => {
         </div>
 
         <div className="new-in__products">
-          {products.map((product) => (
+          {filterProducts.map((product) => (
             <ProductCard
               key={product.id}
               image={product.image}

@@ -1,0 +1,12 @@
+.shop__products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+  margin: 3.2rem 0;
+}
+
+@media (min-width: 1040px) {
+  .shop__products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
