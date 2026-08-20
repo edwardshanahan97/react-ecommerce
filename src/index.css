@@ -51,8 +51,17 @@ h4 {
   font-weight: 400;
 }
 
+h1 {
+  font-size: 4.4rem;
+}
+
 h2 {
   font-size: 3.2rem;
+}
+
+.text-lead {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
 }
 
 a {
@@ -74,12 +83,20 @@ a {
 }
 
 @media (min-width: 768px) {
+  h1 {
+    font-size: 4.4rem;
+  }
+
   h2 {
     font-size: 3.6rem;
   }
 }
 
 @media (min-width: 1040px) {
+  h1 {
+    font-size: 5.6rem;
+  }
+
   h2 {
     font-size: 4.4rem;
   }

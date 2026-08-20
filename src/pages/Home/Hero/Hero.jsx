@@ -8,9 +8,9 @@ const Hero = () => {
     <section className="hero">
       <img className="hero__img" src={HeroBG} />
       <Container>
-        <h1 className="hero__title">THE COLLECTION</h1>
+        <h1 className="heading-primary">THE COLLECTION</h1>
 
-        <p className="hero__text">New arrivals across women and men.</p>
+        <p className="text-lead">New arrivals across women and men.</p>
 
         <div className="hero__buttons">
           <Button text="Shop Women" className="button--full" />

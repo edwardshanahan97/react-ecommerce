@@ -28,22 +28,22 @@ const Navbar = () => {
 
         <ul className={`navbar__list ${isActive ? "active" : ""}`}>
           <li className="navbar__item">
-            <NavLink to="/women" className="navbar__link">
+            <NavLink to="/shop/women" className="navbar__link">
               Women
             </NavLink>
           </li>
           <li className="navbar__item">
-            <NavLink to="/men" href="#" className="navbar__link">
+            <NavLink to="/shop/men" href="#" className="navbar__link">
               Men
             </NavLink>
           </li>
           <li className="navbar__item">
-            <NavLink to="/beauty" href="#" className="navbar__link">
+            <NavLink to="/shop/beauty" href="#" className="navbar__link">
               Beauty
             </NavLink>
           </li>
           <li className="navbar__item">
-            <NavLink to="/accessories" className="navbar__link">
+            <NavLink to="/shop/accessories" className="navbar__link">
               Accessories
             </NavLink>
           </li>

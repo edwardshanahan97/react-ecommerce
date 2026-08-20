@@ -9,15 +9,6 @@
   margin-bottom: 1.6rem;
 }
 
-.hero__title {
-  font-size: 3.6rem;
-}
-
-.hero__text {
-  font-size: 1.6rem;
-  margin-bottom: 2.4rem;
-}
-
 .hero .button:first-child {
   margin-bottom: 2.4rem;
 }
@@ -44,10 +35,6 @@
 
   .hero__img {
     display: none;
-  }
-
-  .hero__title {
-    font-size: 4.4rem;
   }
 
   .hero__buttons {
@@ -81,10 +68,6 @@
 
   .hero__img {
     display: none;
-  }
-
-  .hero__title {
-    font-size: 5.6rem;
   }
 
   .hero .button {
