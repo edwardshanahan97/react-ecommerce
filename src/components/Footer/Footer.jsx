@@ -49,6 +49,10 @@ const Footer = () => {
           </a>
         </div>
       </Container>
+
+      <p className="footer__disclaimer">
+        Fictional website created for educational purposes.
+      </p>
     </footer>
   );
 };
