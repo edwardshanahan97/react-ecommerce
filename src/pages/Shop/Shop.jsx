@@ -7,6 +7,7 @@ import { products } from "../../data/products";
 import "./Shop.css";
 import ShopFilters from "./ShopFilter/ShopFilter";
 import ShopProducts from "./ShopProducts/ShopProducts";
+import ShopFeatures from "./ShopFeatures/ShopFeatures";
 
 const Shop = () => {
   const { category } = useParams();
@@ -58,6 +59,8 @@ const Shop = () => {
         />
 
         <ShopProducts sortedProducts={sortedProducts} />
+
+        <ShopFeatures />
       </Container>
     </main>
   );
