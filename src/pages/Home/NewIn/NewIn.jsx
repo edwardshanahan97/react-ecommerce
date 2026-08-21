@@ -13,10 +13,6 @@ const NewIn = () => {
     .reverse()
     .slice(0, 4);
 
-  console.log(filterProducts);
-
-  console.log(products);
-
   return (
     <section className="new-in">
       <Container>
@@ -34,6 +30,8 @@ const NewIn = () => {
           {filterProducts.map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
+              category={product.category}
               image={product.image}
               title={product.title}
               price={product.price}
