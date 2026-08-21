@@ -1,9 +1,9 @@
 import ProductCard from "../../../components/ProductCard/ProductCard";
 
-const ShopProducts = ({ filteredProducts }) => {
+const ShopProducts = ({ sortedProducts }) => {
   return (
     <div className="shop__products">
-      {filteredProducts.map(({ id, image, title, price }) => (
+      {sortedProducts.map(({ id, image, title, price }) => (
         <ProductCard
           key={id}
           id={id}

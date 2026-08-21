@@ -11,6 +11,7 @@ import ShopProducts from "./ShopProducts/ShopProducts";
 const Shop = () => {
   const { category } = useParams();
   const [selectedType, setSelectedType] = useState("all");
+  const [sort, setSort] = useState("featured");
 
   const categoryProducts = products.filter(
     (product) => category === product.category,
@@ -20,8 +21,18 @@ const Shop = () => {
     (product) => selectedType === "all" || product.type === selectedType,
   );
 
+  const sortedProducts = filteredProducts.map((product) => product);
+
+  if (sort === "low") {
+    sortedProducts.sort((a, b) => a.price - b.price);
+  } else if (sort === "high") {
+    sortedProducts.sort((a, b) => b.price - a.price);
+  }
+
   useEffect(() => {
     setSelectedType("all");
+
+    setSort("featured");
   }, [category]);
 
   const productTypes = categoryProducts.map((product) => product.type);
@@ -38,12 +49,15 @@ const Shop = () => {
 
       <Container>
         <ShopFilters
+          selectedType={selectedType}
           setSelectedType={setSelectedType}
           categoryProducts={categoryProducts}
           typeCounts={typeCounts}
+          setSort={setSort}
+          sort={sort}
         />
 
-        <ShopProducts filteredProducts={filteredProducts} />
+        <ShopProducts sortedProducts={sortedProducts} />
       </Container>
     </main>
   );
