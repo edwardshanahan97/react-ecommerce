@@ -3,6 +3,7 @@ import { useCart } from "../../context/CartContext";
 import "./Cart.css";
 import CartProducts from "./CartProducts/CartProducts";
 import CartSummary from "./CartSummary/CartSummary";
+import CartEmpty from "./CartEmpty/CartEmpty";
 
 const Cart = () => {
   const { cart } = useCart();
@@ -12,11 +13,17 @@ const Cart = () => {
   return (
     <div className="cart">
       <Container>
-        <h1>Shopping Bags</h1>
+        {cart.length === 0 ? (
+          <CartEmpty />
+        ) : (
+          <>
+            <h1>Shopping Bags</h1>
 
-        <CartProducts cart={cart} />
+            <CartProducts cart={cart} />
 
-        <CartSummary />
+            <CartSummary />
+          </>
+        )}
       </Container>
     </div>
   );
