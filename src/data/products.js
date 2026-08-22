@@ -3,7 +3,7 @@ export const products = [
     id: 1,
     title: "Relaxed Cotton Shirt",
     price: 79,
-    image: "/public/assets/images/relaxed-cotton-shirt.webp",
+    image: "/assets/images/relaxed-cotton-shirt.webp",
     category: "men",
     type: "tops",
     description:
@@ -17,7 +17,7 @@ export const products = [
     id: 2,
     title: "Tailored Pleated Trousers",
     price: 119,
-    image: "/public/assets/images/tailored-pleated-trousers.webp",
+    image: "/assets/images/tailored-pleated-trousers.webp",
     category: "men",
     type: "trousers",
     description:
@@ -31,7 +31,7 @@ export const products = [
     id: 3,
     title: "Leather Shoulder Bag",
     price: 129,
-    image: "/public/assets/images/leather-shoulder-bag.webp",
+    image: "/assets/images/leather-shoulder-bag.webp",
     category: "accessories",
     type: "bags",
     description:
@@ -45,7 +45,7 @@ export const products = [
     id: 4,
     title: "Ribbed Knit Top",
     price: 69,
-    image: "/public/assets/images/ribbed-knit-top.webp",
+    image: "/assets/images/ribbed-knit-top.webp",
     category: "women",
     type: "tops",
     description:
@@ -59,7 +59,7 @@ export const products = [
     id: 5,
     title: "Merino Knit Polo",
     price: 89,
-    image: "/public/assets/images/merino-knit-polo.webp",
+    image: "/assets/images/merino-knit-polo.webp",
     category: "men",
     type: "tops",
     description:
@@ -73,7 +73,7 @@ export const products = [
     id: 6,
     title: "Leather Court Trainers",
     price: 139,
-    image: "/public/assets/images/leather-court-trainers.webp",
+    image: "/assets/images/leather-court-trainers.webp",
     category: "men",
     type: "shoes",
     description:
@@ -86,7 +86,7 @@ export const products = [
     id: 7,
     title: "Hydrating Face Cream",
     price: 42,
-    image: "/public/assets/images/hydrating-face-cream.webp",
+    image: "/assets/images/hydrating-face-cream.webp",
     category: "beauty",
     type: "skincare",
     description:

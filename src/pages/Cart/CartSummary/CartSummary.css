@@ -1,0 +1,9 @@
+.cart-summary {
+  padding: 2.4rem;
+
+  background-color: var(--color-surface);
+}
+
+.cart-summary h2 {
+  font-size: 2rem;
+}

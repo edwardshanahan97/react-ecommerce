@@ -7,6 +7,7 @@ import ShopFeatures from "../Shop/ShopFeatures/ShopFeatures";
 import { Heart, Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "../../context/CartContext";
+import QuantityButton from "../../components/QuantityButton/QuantityButton";
 
 const Product = () => {
   const { id } = useParams();
@@ -19,8 +20,6 @@ const Product = () => {
 
   const { image, title, price, description, rating, reviews, sizes } = product;
 
-  const handleIncrement = () => setquantity(quantity + 1);
-
   const cartId = Number(id);
 
   const cartItem = {
@@ -31,6 +30,8 @@ const Product = () => {
     selectSize,
     quantity,
   };
+
+  const handleIncrement = () => setquantity(quantity + 1);
 
   const handleDecrement = () => {
     if (quantity <= 1) {
@@ -86,21 +87,17 @@ const Product = () => {
             {error && <p className="product__error">{error}</p>}
           </div>
 
-          <div className="product__quantity">
-            <button onClick={handleDecrement}>-</button>
+          <QuantityButton
+            quantity={quantity}
+            onDecrement={handleDecrement}
+            onIncrement={handleIncrement}
+          />
 
-            <span>{quantity}</span>
-
-            <button onClick={handleIncrement}>+</button>
-          </div>
-
-          {/* <Button
-            onClick={handleAddToCart}
+          <Button
+            func={handleAddToCart}
             className={"button--full"}
             text="Add To Cart"
-          /> */}
-
-          <button onClick={handleAddToCart}>Add to cart</button>
+          />
 
           <button className="product__wishlist">
             <Heart />

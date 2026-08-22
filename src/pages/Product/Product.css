@@ -95,37 +95,6 @@
   margin-top: 0.8rem;
 }
 
-.product__quantity {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-
-  width: 12rem;
-  min-height: 4.4rem;
-
-  margin-bottom: 2.4rem;
-
-  font-size: 1.4rem;
-  text-align: center;
-
-  border: 1px solid var(--color-border);
-}
-
-.product__quantity button {
-  height: 100%;
-
-  color: var(--color-text-dark);
-  background-color: transparent;
-
-  font-size: 1.8rem;
-
-  border: none;
-}
-
-.product__quantity button:hover {
-  background-color: var(--color-surface);
-}
-
 .product .button--full {
   width: 100%;
   margin-bottom: 1.6rem;

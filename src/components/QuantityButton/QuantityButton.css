@@ -1,0 +1,30 @@
+.quantity-button {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  width: 12rem;
+  min-height: 4.4rem;
+
+  margin-bottom: 2.4rem;
+
+  font-size: 1.4rem;
+  text-align: center;
+
+  border: 1px solid var(--color-border);
+}
+
+.quantity-button button {
+  height: 100%;
+
+  color: var(--color-text-dark);
+  background-color: transparent;
+
+  font-size: 1.8rem;
+
+  border: none;
+}
+
+.quantity-button button:hover {
+  background-color: var(--color-surface);
+}
