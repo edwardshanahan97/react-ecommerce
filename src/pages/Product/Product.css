@@ -89,6 +89,12 @@
   border-color: var(--color-text-dark);
 }
 
+.product__error {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+
 .product__quantity {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

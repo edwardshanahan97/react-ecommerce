@@ -13,6 +13,7 @@ const Product = () => {
   const [quantity, setquantity] = useState(1);
   const [selectSize, setSelectSize] = useState();
   const { addToCart } = useCart();
+  const [error, setError] = useState("");
 
   const product = products.find((product) => product.id === Number(id));
 
@@ -40,7 +41,13 @@ const Product = () => {
   };
 
   const handleAddToCart = () => {
-    addToCart(cartItem);
+    if (!selectSize) {
+      setError("Please select size!");
+      return;
+    } else {
+      addToCart(cartItem);
+      setError(false);
+    }
   };
 
   return (
@@ -75,6 +82,8 @@ const Product = () => {
                 </button>
               ))}
             </div>
+
+            {error && <p className="product__error">{error}</p>}
           </div>
 
           <div className="product__quantity">

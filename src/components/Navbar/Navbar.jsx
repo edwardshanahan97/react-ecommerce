@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 import Container from "../Container/Container";
 import "./Navbar.css";
 import { Heart, Search, ShoppingBag, User } from "lucide-react";
+import { useCart } from "../../context/CartContext";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const { cartQuantity } = useCart();
 
   useEffect(() => {
     if (isActive) {
@@ -64,16 +66,28 @@ const Navbar = () => {
             <Heart color="#171717" size={20} strokeWidth={1.5} />
           </NavLink>
 
-          <NavLink to="/cart" className="navbar__icon" aria-label="Cart">
+          <NavLink
+            to="/cart"
+            className="navbar__icon navbar__cart"
+            aria-label="Cart"
+          >
             <ShoppingBag color="#171717" size={20} strokeWidth={1.5} />
+
+            <span className="navbar__cart-count">{cartQuantity}</span>
           </NavLink>
         </div>
 
         <div className="navbar__icons-mobile">
           <Search color="#171717" size={20} strokeWidth={1.5} />
 
-          <NavLink to="cart" className="navbar__icon" aria-label="Cart">
+          <NavLink
+            to="cart"
+            className="navbar__icon navbar__cart"
+            aria-label="Cart"
+          >
             <ShoppingBag color="#171717" size={20} strokeWidth={1.5} />
+
+            <span className="navbar__cart-count">{cartQuantity}</span>
           </NavLink>
         </div>
 
